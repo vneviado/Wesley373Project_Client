@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="card large">
+    <div class="card-content is-light-grey">
+
+      <%= simple_form_for(@user) do |f| %>
+        <%= f.error_notification %>
+
+        <% roles = Array["service_owner", "company_staff", "admin"]%>
+
+        <div class="field">
+          <div class="control">
+        	  <%= f.input :role, collection: roles, wrapper: false %>
+          </div>
+        </div>
+
+
+        <div class="field">
+          <div class="control">       
+            <%= f.input :username, label_html: { class: 'active' }, wrapper: false,  wrapper_html: { class: 'input' } %>
+          </div>
+        </div>
+
+
+     <div class="field">
+         <div class="control">
+           <%= f.input :services, label_html: { class: 'active' }, wrapper: false,  wrapper_html: { class: 'input' } %>
+         </div>
+       </div>
+
+<!--         <div class="field">
+          <div class="control">  
+            <%#= f.input :username, label_html: { class: 'active"' }, wrapper: false,  wrapper_html: { class: 'input' } %>
+          </div>
+        </div>-->
+
+        <%= f.button :submit %>
+
+      </div>
+    </div>
+  </div>
+<% end %>

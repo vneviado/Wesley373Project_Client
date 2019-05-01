@@ -1,0 +1,30 @@
+<div class="row valign-wrapper topbar">
+
+  <div class="col s4 padding-left padding-right padding-top">
+
+  	<div class="columns is-multiline is-mobile">
+
+    	<div class="column is-8"><%= image_tag('white_logo.png', height: '30%', width: '30%') %></div>
+
+    	<div class="column is-4">
+		   	<div class="signin_item padding-left">
+
+			    <% if user_signed_in? %>
+
+			        <p>Signed in as <%= current_user.username %></p>
+					
+					
+			        <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+					<p><font color=#591b6b>Access Level: <%= current_user.role %></font></p>
+			    <% else %>
+			        <%= link_to "Sign in", new_user_session_path %></p>
+			    <% end %>
+
+		    </div>
+    	</div>
+    </div>
+
+  </div>
+
+</div>
+</div>

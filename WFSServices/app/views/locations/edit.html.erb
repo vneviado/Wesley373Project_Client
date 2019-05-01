@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row columns">
+    <div class="column">
+      <br/>
+      <p class="title is-4 no-padding">Editing Location</p>
+    </div>
+  </div>
+</div>
+
+<%= render 'form_edit', location: @location %>
+
+<div class="container">
+  <div class="row columns">
+    <div class="column">
+      <br>
+      <%= link_to 'Back', @location, class: "button is-info is-rounded" %>
+    </div>
+  </div>
+</div>

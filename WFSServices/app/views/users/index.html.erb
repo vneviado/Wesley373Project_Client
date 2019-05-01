@@ -1,0 +1,62 @@
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">Users</h1>
+      <div class="container">
+
+        <% if notice != nil %>
+          <article class="message is-primary">
+            <div class="message-body">
+              <p id="notice"><%= notice %></p>
+            </div>
+          </article>
+        <% end %>
+
+        <div class="row columns">
+          <div class="column">
+                    
+          <% if can? :read, User %>
+            <div class="container">
+              <table class="table is-striped is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Username</th>
+                    <th>Role</th>
+                    <th>Services</th>
+                    <th></th>
+                    <th></th>
+                  </tr>
+                </thead>
+                    <% @users.each do |u| %>
+                      <tr>
+                      <td><%= u.username %></td>
+                      <td><%= u.role %></td>
+                      <td>
+						<% if u.services != nil %>
+                          <% u.services.split(",").each do |s| %>
+                            <% @s = Service.find(s) %>
+                            <p><%= link_to @s.name, @s %></p>
+                          <% end %>
+						<% end %>
+                      </td>
+                      <td>
+                        <%= link_to edit_user_path(u) do %>
+                            <i class="material-icons">edit</i>
+                        <% end %>
+                      </td>
+                      <td>
+                        <%= link_to(u, method: :delete, data: { confirm: 'Are you sure?' }) do %>
+                          <i class="material-icons icon-grey">clear</i>
+                        <% end %>
+                      </td>
+                      </tr>
+                    <% end %>
+              </table>
+            </div>
+          <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

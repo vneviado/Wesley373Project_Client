@@ -1,0 +1,121 @@
+.field {
+  margin: 8px 0;
+}
+
+a {
+  color: #591b6b;
+}
+
+.is-black{
+  background-color: #000000;
+}
+
+.is-purple{
+  background-color: #591b6b;
+}
+
+.is-white {
+  background-color: #FFFFFF
+}
+
+.padding-top {
+  padding-top: 20px;
+}
+
+.padding-right {
+  padding-right: 30px;
+}
+
+.padding-left{
+  padding-left: 30px;
+}
+
+.padding-bottom{
+  padding-bottom: 30px;
+}
+
+.topbar{
+  background-color: #591b6b;
+}
+
+.has-text-purple {
+  color: #591b6b;
+}
+
+.card-padding{
+  padding-top: 40px;
+}
+
+
+.simple_form input {
+  height: 35px;
+  width: 250px;
+  margin-left: 10px;
+}
+
+.select {
+  margin-left: 10px;
+}
+
+.simple_form button {
+  text-align: center;
+}
+
+input[type="submit" i] {
+  height: 35px;
+  width: 180px;
+  margin-left: 10px;
+  font-size: 12pt;
+  border-radius: 25px;
+  background-color: #c6417c;
+  color: #fff;
+}
+
+.is-light-grey {
+  background-color: #F8F8F8
+}
+
+.button {
+  margin-right: 20px;
+}
+
+.button.is-small {
+  border-radius: 0px;
+  font-size: 10pt;
+  height: 26px;
+  width: 60px;
+  margin-left: -20px;
+}
+
+.section {
+    padding: 70px 10px;
+}
+
+.signin_item a {
+  color: #fff;
+  text-align: right;
+}
+
+.signin_item a:hover {
+  color: #bbb;
+  text-align: right;
+}
+
+.signin_item {
+  color: #ff6394;
+  text-align: right;
+}
+
+input {
+  height: 25px;
+  width: 180px;
+  padding-bottom: -2px;
+}
+
+.select:not(.is-multiple):not(.is-loading)::after {
+  display: none;
+}
+
+.material-icons {
+  font-size: 20px;
+}
